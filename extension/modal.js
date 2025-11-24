@@ -645,13 +645,13 @@ class BananaModal {
             return
         }
 
-        // 处理 Left/Right 键
-        if (event.key === 'ArrowLeft') {
+        // 处理 Left/Right 键和 Up/Down 键
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
             event.preventDefault()
             if (this.currentPage > 1) {
                 this.changePage(-1)
             }
-        } else if (event.key === 'ArrowRight') {
+        } else if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
             event.preventDefault()
             if (this.currentPage < totalPages) {
                 this.changePage(1)
