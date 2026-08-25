@@ -1,4 +1,11 @@
 window.Utils = {
+    promptId(prompt) {
+        if (prompt.source && prompt.source_id !== undefined && prompt.source_id !== null) {
+            return `${prompt.source}:${prompt.source_id}`;
+        }
+        return `${prompt.title}-${prompt.author}`;
+    },
+
     async compressImage(file) {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();

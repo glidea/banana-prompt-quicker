@@ -146,7 +146,7 @@ class Store {
 
     ensureRandomValues() {
         this.state.prompts.forEach(p => {
-            const key = `${p.title}-${p.author}`;
+            const key = window.Utils.promptId(p);
             if (!this.state.randomMap.has(key)) {
                 this.state.randomMap.set(key, Math.random());
             }
@@ -224,7 +224,7 @@ OK，我想要：`,
 
             if (activeFilters.size === 0) return true;
 
-            const promptId = `${prompt.title}-${prompt.author}`;
+            const promptId = window.Utils.promptId(prompt);
             const isFavorite = favorites.includes(promptId);
 
             return Array.from(activeFilters).every(filter => {
@@ -253,7 +253,7 @@ OK，我想要：`,
         const normalItems = [];
 
         filtered.forEach(item => {
-            const itemId = `${item.title}-${item.author}`;
+            const itemId = window.Utils.promptId(item);
             const isFavorite = favorites.includes(itemId);
 
             if (isFavorite) {

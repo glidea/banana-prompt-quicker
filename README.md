@@ -127,6 +127,16 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
 
 ## 🤝 贡献提示词
 
+### 提示词来源
+
+本项目收录了 [awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2) 的提示词案例，并保留了原作者与来源链接。预览图由源项目通过 jsDelivr 提供。
+
+维护者可执行以下命令同步该来源的最新数据：
+
+```bash
+node make/import_awesome_gpt_image_2.js
+```
+
 直接开 Issue，形式不限，可以直接分享你的创意，或者自媒体案例链接...
 
 但建议包含以下信息

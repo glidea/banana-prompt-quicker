@@ -14,7 +14,7 @@ window.UI.Card = {
         } = options;
 
         const { h } = window.DOM;
-        const promptId = `${prompt.title}-${prompt.author}`;
+        const promptId = window.Utils.promptId(prompt);
         const isFavorite = favorites.includes(promptId);
 
         const cardStyle = `
